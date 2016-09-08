@@ -5,7 +5,7 @@ SECONDS_IN_MIN  = 60
 MIN_IN_HOUR     = 60
 SECONDS_IN_HOUR = SECONDS_IN_MIN * MIN_IN_HOUR
 
-logger = Logger.new('fatal.log', 'daily')
+logger = Logger.new('./log/fatal.log', 'daily')
 
 loop do
   begin
