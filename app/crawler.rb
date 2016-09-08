@@ -1,6 +1,7 @@
 require 'mechanize'
 require 'sqlite3'
-requrie 'singleton'
+require 'singleton'
+
 
 require 'awesome_print'
 require 'pry'
