@@ -1,7 +1,7 @@
 require 'mechanize'
 require 'sqlite3'
 require 'singleton'
-
+require 'Logger'
 
 require 'awesome_print'
 require 'pry'
@@ -12,6 +12,7 @@ class Crawler
   SOURCE_WEBSITE = "http://l2tops.ru/"
 
   def initialize
+    @logger    = Logger.new('logfile.log', 10, 512_000)
     @server_db = SQLite3::Database.new "servers.db"
     @result_db = SQLite3::Database.new "results.db"
     @agent = Mechanize.new
@@ -26,7 +27,7 @@ class Crawler
           extract_data_from_node sever_node
         )
       rescue Exception => e
-        ap "Got error #{e} for page:\n #{sever_node}"
+        logger.warn "#{e} for page:\n #{sever_node}"
       end
     end
     save_results
@@ -58,7 +59,7 @@ class Crawler
         [Time.now, servers.length]
        )
     rescue Exception => e
-      ap "Got error when saving results: #{e}"
+      logger.error "When saving results: #{e}"
     end
   end
 end
