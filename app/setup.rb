@@ -8,6 +8,7 @@ database.execute <<-SQL
     chronicles text,
     rates int,
     date text,
+    created_at text,
     unique (title, chronicles, rates, date)
   );
 SQL
