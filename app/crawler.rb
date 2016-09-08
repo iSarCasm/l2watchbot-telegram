@@ -22,15 +22,28 @@ class Crawler
         rates       = page_server.at('.rates').text
         date        = page_server.at('.date').text
 
-        server_db.execute("insert into servers values ( ?, ?, ?, ? )", [title, chronicles, rates, date])
+        server_db.execute(
+          "insert into servers (title, chronicles, rates, date) values ( ?, ?, ?, ? )",
+          [title, chronicles, rates, date]
+        )
       rescue Exception => e
         ap "Got error #{e} for page:"
         ap page_server
       end
     end
-    
+
     servers = server_db.execute("select * from servers")
     servers.each { |s| p s }
     ap "Servers in total: #{servers.length}"
+
+    begin
+      result_db.execute(
+        "insert into results (date, total_servers) values ( ?, ? )",
+        [Time.now, servers.length]
+       )
+    rescue Exception => e
+      ap "Got error when saving results:"
+      ap e
+    end
   end
 end
