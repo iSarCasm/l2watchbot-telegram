@@ -2,6 +2,8 @@
 # A sample Gemfile
 source "https://rubygems.org"
 
-gem 'pry'
 gem 'mechanize'
+gem 'sqlite3'
+
+gem 'pry'
 gem 'awesome_print'
