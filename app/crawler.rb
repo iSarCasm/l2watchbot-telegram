@@ -12,9 +12,8 @@ class Crawler
   SOURCE_WEBSITE = "http://l2tops.ru/"
 
   def initialize
-    @logger    = Logger.new('logfile.log', 10, 512_000)
-    @server_db = SQLite3::Database.new "servers.db"
-    @result_db = SQLite3::Database.new "results.db"
+    @logger    = Logger.new('logfile.log', 10, 2_048_000)
+    @database = SQLite3::Database.new "l2watchbot.db"
     @agent = Mechanize.new
   end
 
@@ -22,7 +21,7 @@ class Crawler
     connect
     extract_nodes_from_page.each do |sever_node|
       begin
-        @server_db.execute(
+        @database.execute(
           "insert into servers (title, chronicles, rates, date) values ( ?, ?, ?, ? )",
           extract_data_from_node(sever_node)
         )
@@ -52,11 +51,11 @@ class Crawler
   end
 
   def save_results
-    server_count = @server_db.execute("select COUNT(*) from servers")
+    server_count = @database.execute("select COUNT(*) from servers")
     begin
-      @result_db.execute(
+      @database.execute(
         "insert into results (date, total_servers) values ( ?, ? )",
-        [Time.now, server_count]
+        [Time.now.iso8601, server_count]
       )
       @logger.info "Total servers: #{server_count}"
     rescue Exception => e

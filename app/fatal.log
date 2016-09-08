@@ -1,17 +1,1 @@
-# Logfile created on 2016-09-09 01:03:28 +0300 by logger.rb/53141
-F, [2016-09-09T01:03:29.712100 #1799] FATAL -- : 
-undefined local variable or method `logger' for #<Crawler:0x000000032d1c68>
-Did you mean?  @logger
-["/home/sarcasm/workspace/l2watchbot/app/crawler.rb:30:in `rescue in block in run'", "/home/sarcasm/workspace/l2watchbot/app/crawler.rb:24:in `block in run'", "/home/sarcasm/.rvm/gems/ruby-2.3.0@l2watchbot/gems/nokogiri-1.6.8/lib/nokogiri/xml/node_set.rb:187:in `block in each'", "/home/sarcasm/.rvm/gems/ruby-2.3.0@l2watchbot/gems/nokogiri-1.6.8/lib/nokogiri/xml/node_set.rb:186:in `upto'", "/home/sarcasm/.rvm/gems/ruby-2.3.0@l2watchbot/gems/nokogiri-1.6.8/lib/nokogiri/xml/node_set.rb:186:in `each'", "/home/sarcasm/workspace/l2watchbot/app/crawler.rb:23:in `run'", "crawler-loop.rb:12:in `block in <main>'", "crawler-loop.rb:10:in `loop'", "crawler-loop.rb:10:in `<main>'"]
-F, [2016-09-09T01:06:19.729413 #2168] FATAL -- : 
-undefined local variable or method `logger' for #<Crawler:0x000000034c1758>
-Did you mean?  @logger
-["/home/sarcasm/workspace/l2watchbot/app/crawler.rb:30:in `rescue in block in run'", "/home/sarcasm/workspace/l2watchbot/app/crawler.rb:24:in `block in run'", "/home/sarcasm/.rvm/gems/ruby-2.3.0@l2watchbot/gems/nokogiri-1.6.8/lib/nokogiri/xml/node_set.rb:187:in `block in each'", "/home/sarcasm/.rvm/gems/ruby-2.3.0@l2watchbot/gems/nokogiri-1.6.8/lib/nokogiri/xml/node_set.rb:186:in `upto'", "/home/sarcasm/.rvm/gems/ruby-2.3.0@l2watchbot/gems/nokogiri-1.6.8/lib/nokogiri/xml/node_set.rb:186:in `each'", "/home/sarcasm/workspace/l2watchbot/app/crawler.rb:23:in `run'", "crawler-loop.rb:12:in `block in <main>'", "crawler-loop.rb:10:in `loop'", "crawler-loop.rb:10:in `<main>'"]
-F, [2016-09-09T01:06:52.418669 #2188] FATAL -- : 
-undefined local variable or method `server_db' for #<Crawler:0x00000002c993a0>
-Did you mean?  @server_db
-["/home/sarcasm/workspace/l2watchbot/app/crawler.rb:55:in `save_results'", "/home/sarcasm/workspace/l2watchbot/app/crawler.rb:33:in `run'", "crawler-loop.rb:12:in `block in <main>'", "crawler-loop.rb:10:in `loop'", "crawler-loop.rb:10:in `<main>'"]
-F, [2016-09-09T01:07:14.139647 #2299] FATAL -- : 
-undefined local variable or method `server_db' for #<Crawler:0x0000000279efd0>
-Did you mean?  @server_db
-["/home/sarcasm/workspace/l2watchbot/app/crawler.rb:55:in `save_results'", "/home/sarcasm/workspace/l2watchbot/app/crawler.rb:33:in `run'", "crawler-loop.rb:12:in `block in <main>'", "crawler-loop.rb:10:in `loop'", "crawler-loop.rb:10:in `<main>'"]
+# Logfile created on 2016-09-09 01:11:27 +0300 by logger.rb/53141

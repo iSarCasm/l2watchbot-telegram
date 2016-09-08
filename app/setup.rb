@@ -1,8 +1,8 @@
 require 'sqlite3'
 
-server_db = SQLite3::Database.new "servers.db"
+database = SQLite3::Database.new "l2watchbot.db"
 
-server_db.execute <<-SQL
+database.execute <<-SQL
   create table servers (
     title text,
     chronicles text,
@@ -12,9 +12,7 @@ server_db.execute <<-SQL
   );
 SQL
 
-results_db = SQLite3::Database.new "results.db"
-
-results_db.execute <<-SQL
+database.execute <<-SQL
   create table results (
     date text,
     total_servers int
