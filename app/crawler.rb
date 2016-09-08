@@ -1,7 +1,7 @@
 require 'mechanize'
 require 'sqlite3'
 require 'singleton'
-require 'Logger'
+require 'logger'
 
 require 'awesome_print'
 require 'pry'
@@ -18,13 +18,13 @@ class Crawler
     @agent = Mechanize.new
   end
 
-  def self.run
+  def run
     connect
     extract_nodes_from_page.each do |sever_node|
       begin
         server_db.execute(
           "insert into servers (title, chronicles, rates, date) values ( ?, ?, ?, ? )",
-          extract_data_from_node sever_node
+          extract_data_from_node(sever_node)
         )
       rescue Exception => e
         logger.warn "#{e} for page:\n #{sever_node}"
@@ -35,15 +35,15 @@ class Crawler
 
   private
 
-  def self.connect
+  def connect
     @page = @agent.get(SOURCE_WEBSITE)
   end
 
-  def self.extract_nodes_from_page
+  def extract_nodes_from_page
     @page.search('.server')
   end
 
-  def self.extract_data_from_node(node)
+  def extract_data_from_node(node)
     title       = node.at('.name').text
     chronicles  = node.at('.chronicle').text
     rates       = node.at('.rates').text
@@ -51,15 +51,16 @@ class Crawler
     [title, chronicles, rates, date]
   end
 
-  def self.save_results
+  def save_results
     server_count = server_db.execute("select COUNT(*) from servers")
     begin
       result_db.execute(
         "insert into results (date, total_servers) values ( ?, ? )",
-        [Time.now, servers.length]
-       )
+        [Time.now, server_count]
+      )
+      @logger.info "Total servers: #{server_count}"
     rescue Exception => e
-      logger.error "When saving results: #{e}"
+      @logger.error "When saving results: #{e}"
     end
   end
 end

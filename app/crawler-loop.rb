@@ -10,9 +10,8 @@ logger = Logger.new('fatal.log', 'daily')
 loop do
   begin
     Crawler.instance.run
-    sleep(SECONDS_IN_HOUR * 3)
   rescue Exception => e
-    Logger.fatal e
-    Logger.fatal e.backtrace
+    logger.fatal "\n#{e}\n#{e.backtrace}"
   end
+  sleep(SECONDS_IN_HOUR * 3)
 end
