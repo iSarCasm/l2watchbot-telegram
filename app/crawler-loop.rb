@@ -11,7 +11,8 @@ loop do
   begin
     Crawler.instance.run
   rescue Exception => e
-    logger.fatal "\n#{e}\n#{e.backtrace}"
+    logger.fatal e
+    logger.fatal e.backtrace
   end
   sleep(SECONDS_IN_HOUR * 3)
 end

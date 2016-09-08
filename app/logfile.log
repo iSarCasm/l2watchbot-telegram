@@ -1,1 +1,583 @@
-# Logfile created on 2016-09-09 01:00:29 +0300 by logger.rb/53141
+# Logfile created on 2016-09-09 01:08:45 +0300 by logger.rb/53141
+W, [2016-09-09T01:08:45.003370 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server vip">
+                    	<span><div class="name"><a href="/out/?url=aHR0cDovL1JQRy1DTFVCLkNPTQ==" target="_blank">RPG-CLUB.COM</a></div>
+                        <div class="rates">x7</div>
+                        <div class="chronicle">high five</div>
+                        <div class="date">23.11.15</div>
+                        <div class="about-vip">
+                        	<div class="sidebar">
+                                <div class="att">
+                                    <div class="item">
+                                        <div class="lcol">Сайт:</div>
+                                        <div class="rcol"><b><a href="/out/?url=aHR0cDovL1JQRy1DTFVCLkNPTQ==" target="_blank">http://RPG-CLUB.COM</a></b></div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="lcol">Рейты:</div>
+                                        <div class="rcol"><b>x7</b></div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="lcol">Открытие:</div>
+                                        <div class="rcol"><b>23.11.15</b></div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="lcol">Хроники:</div>
+                                        <div class="rcol"><b>high five</b></div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                                                                                            </div>
+                            <div class="content">
+                               	                            </div>
+                            <div class="clear"></div>
+                        </div>
+						</span>
+						<div class="like"><span id="post-ratings-171" class="post-ratings" data-nonce="b32baf9ffd"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.004268 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL2lkeWxsaWEucnU=" target="_blank">idyllia.ru</a></div>
+                        <div class="rates">x100</div>
+                        <div class="chronicle">interlude</div>
+                        <div class="date">06.09.16</div>  
+						<div class="like"><span id="post-ratings-833" class="post-ratings" data-nonce="af6adb27f9"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.004932 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL2FsbHRlcmlhLnJ1" target="_blank">allteria.ru</a></div>
+                        <div class="rates">x50000</div>
+                        <div class="chronicle">interlude+</div>
+                        <div class="date">03.09.16</div>  
+						<div class="like"><span id="post-ratings-788" class="post-ratings" data-nonce="b784cd56cf"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.006036 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server vip">
+                    	<span><div class="name"><a href="/out/?url=aHR0cDovL2wybmFtZS5ydQ==" target="_blank">l2name.ru</a></div>
+                        <div class="rates">x50</div>
+                        <div class="chronicle">high five</div>
+                        <div class="date">03.09.16</div>
+                        <div class="about-vip">
+                        	<div class="sidebar">
+                                <div class="att">
+                                    <div class="item">
+                                        <div class="lcol">Сайт:</div>
+                                        <div class="rcol"><b><a href="/out/?url=aHR0cDovL2wybmFtZS5ydQ==" target="_blank">http://l2name.ru</a></b></div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="lcol">Рейты:</div>
+                                        <div class="rcol"><b>x50</b></div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="lcol">Открытие:</div>
+                                        <div class="rcol"><b>03.09.16</b></div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="lcol">Хроники:</div>
+                                        <div class="rcol"><b>high five</b></div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                                                                                            </div>
+                            <div class="content">
+                               	                            </div>
+                            <div class="clear"></div>
+                        </div>
+						</span>
+						<div class="like"><span id="post-ratings-733" class="post-ratings" data-nonce="aa1c069b0d"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.006710 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL3Byb21vLnRoYW5hdG9zLnBybw==" target="_blank">promo.thanatos.pro</a></div>
+                        <div class="rates">x10</div>
+                        <div class="chronicle">interlude</div>
+                        <div class="date">03.09.16</div>  
+						<div class="like"><span id="post-ratings-738" class="post-ratings" data-nonce="142a6d995a"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.008224 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server vip">
+                    	<span><div class="name"><a href="/out/?url=aHR0cDovL2xpbmVhZ2UtZ2FtZS5ydQ==" target="_blank">lineage-game.ru</a></div>
+                        <div class="rates">x10</div>
+                        <div class="chronicle">interlude</div>
+                        <div class="date">03.09.16</div>
+                        <div class="about-vip">
+                        	<div class="sidebar">
+                                <div class="att">
+                                    <div class="item">
+                                        <div class="lcol">Сайт:</div>
+                                        <div class="rcol"><b><a href="/out/?url=aHR0cDovL2xpbmVhZ2UtZ2FtZS5ydQ==" target="_blank">http://lineage-game.ru</a></b></div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="lcol">Рейты:</div>
+                                        <div class="rcol"><b>x10</b></div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="lcol">Открытие:</div>
+                                        <div class="rcol"><b>03.09.16</b></div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="lcol">Хроники:</div>
+                                        <div class="rcol"><b>interlude</b></div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                                                                                            </div>
+                            <div class="content">
+                               	<p><strong>Что вас ждет у нас:</strong></p>
+<ul>
+<li><span class="style23">Гарантия работы без вайпов 2 года</span></li>
+<li><span class="style23">Стабильный ненакрученный онлайн</span></li>
+<li><span class="style23">Качественная проверенная временем уникальная сборка</span></li>
+<li><span class="style23">Автоматические ивенты: TVT, CTF</span></li>
+<li><span class="style23">В неосадные выходные проводятся pvp турниры</span></li>
+<li><span class="style23">Авторские эвенты каждую неделю, на которых можно получить CoL</span></li>
+<li><span class="style23">Бонусы в игре за голосование на L2TOP и MMOTOP</span></li>
+</ul>
+<p><strong>Сервер Interlude х10 — классика без дополнений</strong></p>
+<ul>
+<li><span class="style23">Рейты: Exp — 10/SP — 10/Adena — 10/Drop — 10/Spoil — 10/Квест — 3</span></li>
+<li><span class="style23">Максимальная заточка +10</span></li>
+<li><span class="style23">Бесплатно все три профы у котов</span></li>
+</ul>
+<p> </p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+						</span>
+						<div class="like"><span id="post-ratings-806" class="post-ratings" data-nonce="b5ef613a1d"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.009933 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server vip">
+                    	<span><div class="name"><a href="/out/?url=aHR0cDovL2xpbmVhZ2UtZ2FtZS5ydQ==" target="_blank">lineage-game.ru</a></div>
+                        <div class="rates">x1000</div>
+                        <div class="chronicle">interlude</div>
+                        <div class="date">03.09.16</div>
+                        <div class="about-vip">
+                        	<div class="sidebar">
+                                <div class="att">
+                                    <div class="item">
+                                        <div class="lcol">Сайт:</div>
+                                        <div class="rcol"><b><a href="/out/?url=aHR0cDovL2xpbmVhZ2UtZ2FtZS5ydQ==" target="_blank">http://lineage-game.ru</a></b></div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="lcol">Рейты:</div>
+                                        <div class="rcol"><b>x1000</b></div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="lcol">Открытие:</div>
+                                        <div class="rcol"><b>03.09.16</b></div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="lcol">Хроники:</div>
+                                        <div class="rcol"><b>interlude</b></div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                                                                                            </div>
+                            <div class="content">
+                               	<p><strong>Что вас ждет у нас:</strong></p>
+<ul>
+<li><span class="style23">Гарантия работы без вайпов 2 года</span></li>
+<li><span class="style23">Стабильный ненакрученный онлайн</span></li>
+<li><span class="style23">Качественная проверенная временем уникальная сборка</span></li>
+<li><span class="style23">Автоматические ивенты: TVT, CTF</span></li>
+<li><span class="style23">В неосадные выходные проводятся pvp турниры</span></li>
+<li><span class="style23">Авторские эвенты каждую неделю, на которых можно получить CoL</span></li>
+<li><span class="style23">Бонусы в игре за голосование на L2TOP и MMOTOP</span></li>
+</ul>
+<p><strong>Сервер Interlude х1000 — классика с минимальными дополнениями</strong></p>
+<ul>
+<li><span class="style23">Рейты: Exp — 1000/SP — 2000/Adena — с мобов падае от 1кк до 8кк аден.</span></li>
+<li><span class="style23">Безопасная точка до +10, шанс заточки выще +10 — 80%</span></li>
+<li><span class="style23">Мультипрофа: возможность покупки до 15 дополнительных скилов</span></li>
+<li><span class="style23">Бесплатно все три профы у котов</span></li>
+<li><span class="style23">Получение дворянства по квесту или за итемы</span></li>
+<li><span class="style23">Абсолютно все РБ 80 лвл</span></li>
+<li><span class="style23">В дропе с РБ только ЛСы, книги точки скилов, заточки</span></li>
+</ul>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+						</span>
+						<div class="like"><span id="post-ratings-812" class="post-ratings" data-nonce="715c6be04b"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.010646 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL2FjaWQtd29ybGQucnU=" target="_blank">acid-world.ru</a></div>
+                        <div class="rates">x10000</div>
+                        <div class="chronicle">high five</div>
+                        <div class="date">03.09.16</div>  
+						<div class="like"><span id="post-ratings-773" class="post-ratings" data-nonce="588cb611ba"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.011534 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL2xhMnBvbGFyaXMucnU=" target="_blank">la2polaris.ru</a></div>
+                        <div class="rates">x100</div>
+                        <div class="chronicle">interlude</div>
+                        <div class="date">03.09.16</div>  
+						<div class="like"><span id="post-ratings-779" class="post-ratings" data-nonce="89fef20558"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.012730 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL2wyZHZ4LmNvbQ==" target="_blank">l2dvx.com</a></div>
+                        <div class="rates">x50</div>
+                        <div class="chronicle">c4</div>
+                        <div class="date">02.09.16</div>  
+						<div class="like"><span id="post-ratings-796" class="post-ratings" data-nonce="e8c6f530d6"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.013832 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL2xpbjJoYXJkLnJ1" target="_blank">lin2hard.ru</a></div>
+                        <div class="rates">x1</div>
+                        <div class="chronicle">c4</div>
+                        <div class="date">02.09.16</div>  
+						<div class="like"><span id="post-ratings-803" class="post-ratings" data-nonce="e298d6f89b"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.015076 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL2xpbmVhZ2ViYXR0bGUucnU=" target="_blank">lineagebattle.ru</a></div>
+                        <div class="rates">x4</div>
+                        <div class="chronicle">c4</div>
+                        <div class="date">02.09.16</div>  
+						<div class="like"><span id="post-ratings-778" class="post-ratings" data-nonce="6ea8b8d032"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.016322 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL3pvbmUtcHZwLnJ1" target="_blank">zone-pvp.ru</a></div>
+                        <div class="rates">x50</div>
+                        <div class="chronicle">high five</div>
+                        <div class="date">01.09.16</div>  
+						<div class="like"><span id="post-ratings-707" class="post-ratings" data-nonce="6d28ac3f85"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.017041 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL2wyLW9yaWdpbmFsLnJ1" target="_blank">l2-original.ru</a></div>
+                        <div class="rates">x10000</div>
+                        <div class="chronicle">c4</div>
+                        <div class="date">30.08.16</div>  
+						<div class="like"><span id="post-ratings-789" class="post-ratings" data-nonce="976a38efb4"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.018411 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server vip">
+                    	<span><div class="name"><a href="/out/?url=aHR0cDovL0VsdmFuZXNzYS5jb20=" target="_blank">Elvanessa.com</a></div>
+                        <div class="rates">x200</div>
+                        <div class="chronicle">high five</div>
+                        <div class="date">30.08.16</div>
+                        <div class="about-vip">
+                        	<div class="sidebar">
+                                <div class="att">
+                                    <div class="item">
+                                        <div class="lcol">Сайт:</div>
+                                        <div class="rcol"><b><a href="/out/?url=aHR0cDovL0VsdmFuZXNzYS5jb20=" target="_blank">http://Elvanessa.com</a></b></div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="lcol">Рейты:</div>
+                                        <div class="rcol"><b>x200</b></div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="lcol">Открытие:</div>
+                                        <div class="rcol"><b>30.08.16</b></div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="lcol">Хроники:</div>
+                                        <div class="rcol"><b>high five</b></div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                                                                                            </div>
+                            <div class="content">
+                               	<p>О сервере Lineage 2 High Five V Elvanessa x200<br>
+Хроники High Five V наиболее приближенные к изначальным задумкам разработчиков, ну и конечно же с небольшими авторскими изменениями.</p>
+<p>Имея за спиной огромный опыт игры и администрирования серверов, изучая потребности игроков, особенности игры, что нужно для хорошего отдыха, фана, торговли, мы постарались объединить все полученные знания в один сервер.</p>
+<p>В первую очередь наш сервер рассчитан на профессиональных игроков с высоким стажем игры, знающих, что такое настоящая Lineage 2, прочувствовавших на себе всю прелесть сражений, гангов, пвп, осад, олимпиад.</p>
+<p>Мы искренне надеемся, что каждый найдет на нашем сервере что-то своё, то, что он искал долгие годы.<br>
+Что Вас ждет на сервере elvanessa.com х200?:</p>
+<p>Стартовый онлайн 1000 +<br>
+Стабильный онлайн (Долгая жизнь сервера).<br>
+Чистая классика Lineage 2 High Five 5<br>
+Качественная и стабильная сборка.<br>
+Защита от залива по IP/HWID.<br>
+Защита от сторонних программ, ботов, подбора паролей.<br>
+Бесконечный фан, ганги, масс пвп.<br>
+Современное, мощное оборудование с большой пропускной способностью — забудьте про лаги/фризы!<br>
+Высококвалифицированная команда администраторов с большим стажем работы.<br>
+Качественная и стабильная сборка.</p>
+<p>Сервер позиционируется как классик-ПВП, что это значит? Все просто — игровые системы имеют классические настройки, просто немного упрощена прокачка персонажа до максимального уровня. Идеальный баланс не нарушают ни крылья, ни оружие с заоблачными статами. На старте вас ждёт играбильный онлайн, стабильная работа сервера и комфортная игра.</p>
+<p>Более подробно о сервере и конфигах у нас на сайте Elvanessa.com</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+						</span>
+						<div class="like"><span id="post-ratings-763" class="post-ratings" data-nonce="dc03f9672f"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.019099 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL2FtYWRldXMubGFuZA==" target="_blank">amadeus.land</a></div>
+                        <div class="rates">x7</div>
+                        <div class="chronicle">high five</div>
+                        <div class="date">27.08.16</div>  
+						<div class="like"><span id="post-ratings-739" class="post-ratings" data-nonce="9e433a2eab"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.019720 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL2NyaW1vcy5ydQ==" target="_blank">crimos.ru</a></div>
+                        <div class="rates">x50000</div>
+                        <div class="chronicle">interlude+</div>
+                        <div class="date">27.08.16</div>  
+						<div class="like"><span id="post-ratings-774" class="post-ratings" data-nonce="09b103872d"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.020379 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL2xpbmVhZ2UtMi1oZWxpb3MucnU=" target="_blank">lineage-2-helios.ru</a></div>
+                        <div class="rates">x5000</div>
+                        <div class="chronicle">odyssey</div>
+                        <div class="date">26.08.16</div>  
+						<div class="like"><span id="post-ratings-728" class="post-ratings" data-nonce="f29955240d"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.021153 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL3dhcmRhbi5ydQ==" target="_blank">wardan.ru</a></div>
+                        <div class="rates">x100</div>
+                        <div class="chronicle">high five</div>
+                        <div class="date">26.08.16</div>  
+						<div class="like"><span id="post-ratings-732" class="post-ratings" data-nonce="4d452743a7"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.021778 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL2FzZ2FyZC13b3JsZC5wdw==" target="_blank">asgard-world.pw</a></div>
+                        <div class="rates">x500</div>
+                        <div class="chronicle">interlude</div>
+                        <div class="date">26.08.16</div>  
+						<div class="like"><span id="post-ratings-759" class="post-ratings" data-nonce="adfc2375b0"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.022413 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL2xhMmZyZWV6Lm5ldA==" target="_blank">la2freez.net</a></div>
+                        <div class="rates">x100</div>
+                        <div class="chronicle">interlude</div>
+                        <div class="date">26.08.16</div>  
+						<div class="like"><span id="post-ratings-762" class="post-ratings" data-nonce="642b947fc8"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.023032 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL2phdmEtd29ybGQucnU=" target="_blank">java-world.ru</a></div>
+                        <div class="rates">x100</div>
+                        <div class="chronicle">interlude</div>
+                        <div class="date">26.08.16</div>  
+						<div class="like"><span id="post-ratings-769" class="post-ratings" data-nonce="91789fc5df"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.023637 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL2wycGVyZmVjdC50dzEucnU=" target="_blank">l2perfect.tw1.ru</a></div>
+                        <div class="rates">x100</div>
+                        <div class="chronicle">interlude</div>
+                        <div class="date">26.08.16</div>  
+						<div class="like"><span id="post-ratings-770" class="post-ratings" data-nonce="d8684b3cf5"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.024226 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL25ldy13YXIucnU=" target="_blank">new-war.ru</a></div>
+                        <div class="rates">x15</div>
+                        <div class="chronicle">interlude</div>
+                        <div class="date">26.08.16</div>  
+						<div class="like"><span id="post-ratings-691" class="post-ratings" data-nonce="737633ce1b"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.024804 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL2xpbjJjcmF6eS5ydQ==" target="_blank">lin2crazy.ru</a></div>
+                        <div class="rates">x10000</div>
+                        <div class="chronicle">interlude</div>
+                        <div class="date">26.08.16</div>  
+						<div class="like"><span id="post-ratings-695" class="post-ratings" data-nonce="ee4955bd6d"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.025392 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL2wybWVsZWZpc3RhLnJ1" target="_blank">l2melefista.ru</a></div>
+                        <div class="rates">x100</div>
+                        <div class="chronicle">interlude</div>
+                        <div class="date">25.08.16</div>  
+						<div class="like"><span id="post-ratings-780" class="post-ratings" data-nonce="51bb39739d"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.025986 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL2xhbmFnZS5ydQ==" target="_blank">lanage.ru</a></div>
+                        <div class="rates">x100</div>
+                        <div class="chronicle">interlude</div>
+                        <div class="date">25.08.16</div>  
+						<div class="like"><span id="post-ratings-749" class="post-ratings" data-nonce="eafbc911c7"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.026557 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL2xpbmVhZ2Uybm9kb25hdC5ydQ==" target="_blank">lineage2nodonat.ru</a></div>
+                        <div class="rates">x1200</div>
+                        <div class="chronicle">high five</div>
+                        <div class="date">20.08.16</div>  
+						<div class="like"><span id="post-ratings-756" class="post-ratings" data-nonce="f65bf17771"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.027147 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL2d2ZS13YXIuaW4udWE=" target="_blank">gve-war.in.ua</a></div>
+                        <div class="rates">xGvE</div>
+                        <div class="chronicle">interlude</div>
+                        <div class="date">20.08.16</div>  
+						<div class="like"><span id="post-ratings-760" class="post-ratings" data-nonce="4bd6dadb99"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.027743 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL2Rlc3RvcnVzLnJ1" target="_blank">destorus.ru</a></div>
+                        <div class="rates">x100000</div>
+                        <div class="chronicle">interlude+</div>
+                        <div class="date">20.08.16</div>  
+						<div class="like"><span id="post-ratings-744" class="post-ratings" data-nonce="b814a70413"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.028327 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL2hmNS5jbHVi" target="_blank">hf5.club</a></div>
+                        <div class="rates">x50</div>
+                        <div class="chronicle">high five</div>
+                        <div class="date">19.08.16</div>  
+						<div class="like"><span id="post-ratings-716" class="post-ratings" data-nonce="98dde586a4"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.028945 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL2dvZHdvcmxkLnJ1" target="_blank">godworld.ru</a></div>
+                        <div class="rates">x1000</div>
+                        <div class="chronicle">odyssey</div>
+                        <div class="date">17.08.16</div>  
+						<div class="like"><span id="post-ratings-623" class="post-ratings" data-nonce="c61d4c149c"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.029543 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL2wycGxheS1nYW1lLnJ1" target="_blank">l2play-game.ru</a></div>
+                        <div class="rates">x100</div>
+                        <div class="chronicle">interlude</div>
+                        <div class="date">17.08.16</div>  
+						<div class="like"><span id="post-ratings-745" class="post-ratings" data-nonce="82cd77be21"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.030163 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL2wyZ3ZlLnJ1" target="_blank">l2gve.ru</a></div>
+                        <div class="rates">x111</div>
+                        <div class="chronicle">interlude</div>
+                        <div class="date">17.08.16</div>  
+						<div class="like"><span id="post-ratings-727" class="post-ratings" data-nonce="bed9f75e96"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.030760 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL3dvcmxkLWV3ZXJ0LnJ1" target="_blank">world-ewert.ru</a></div>
+                        <div class="rates">x100</div>
+                        <div class="chronicle">interlude+</div>
+                        <div class="date">16.08.16</div>  
+						<div class="like"><span id="post-ratings-746" class="post-ratings" data-nonce="0cc5b5c009"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.031473 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL2wyZmFtaWx5cmVib3JuLmNvbQ==" target="_blank">l2familyreborn.com</a></div>
+                        <div class="rates">x5000</div>
+                        <div class="chronicle">interlude+</div>
+                        <div class="date">15.08.16</div>  
+						<div class="like"><span id="post-ratings-736" class="post-ratings" data-nonce="41b0febf6d"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.032093 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL2xhMndvZC5ydQ==" target="_blank">la2wod.ru</a></div>
+                        <div class="rates">x1111</div>
+                        <div class="chronicle">interlude</div>
+                        <div class="date">15.08.16</div>  
+						<div class="like"><span id="post-ratings-737" class="post-ratings" data-nonce="815069f90f"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.032685 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL2wyaG9vbGlnYW5zLmNvbQ==" target="_blank">l2hooligans.com</a></div>
+                        <div class="rates">x1000</div>
+                        <div class="chronicle">interlude</div>
+                        <div class="date">13.08.16</div>  
+						<div class="like"><span id="post-ratings-696" class="post-ratings" data-nonce="b3b4b42c40"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.033295 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL2xhMi5tZQ==" target="_blank">la2.me</a></div>
+                        <div class="rates">x5555</div>
+                        <div class="chronicle">high five</div>
+                        <div class="date">13.08.16</div>  
+						<div class="like"><span id="post-ratings-718" class="post-ratings" data-nonce="95fc1c16a2"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.033911 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL2xhMndvcmxkLm5ldA==" target="_blank">la2world.net</a></div>
+                        <div class="rates">x10000</div>
+                        <div class="chronicle">interlude</div>
+                        <div class="date">13.08.16</div>  
+						<div class="like"><span id="post-ratings-720" class="post-ratings" data-nonce="21bac09050"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.034500 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL2wyLWJhdHRsZS5ldQ==" target="_blank">l2-battle.eu</a></div>
+                        <div class="rates">x2000</div>
+                        <div class="chronicle">interlude+</div>
+                        <div class="date">13.08.16</div>  
+						<div class="like"><span id="post-ratings-724" class="post-ratings" data-nonce="248d8e0097"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.035103 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL2ZvYm9zLndpbg==" target="_blank">fobos.win</a></div>
+                        <div class="rates">x5</div>
+                        <div class="chronicle">high five</div>
+                        <div class="date">13.08.16</div>  
+						<div class="like"><span id="post-ratings-692" class="post-ratings" data-nonce="267eaf52e5"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.035700 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL2wyZGFyay13b3JsZC5ydQ==" target="_blank">l2dark-world.ru</a></div>
+                        <div class="rates">x50</div>
+                        <div class="chronicle">interlude</div>
+                        <div class="date">12.08.16</div>  
+						<div class="like"><span id="post-ratings-709" class="post-ratings" data-nonce="24bee39a92"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.036299 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL2JhdHRsZWNvcmUucHc=" target="_blank">battlecore.pw</a></div>
+                        <div class="rates">x50000</div>
+                        <div class="chronicle">interlude+</div>
+                        <div class="date">12.08.16</div>  
+						<div class="like"><span id="post-ratings-711" class="post-ratings" data-nonce="a76f567664"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.036900 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL2xpbjJjcmF6eS5ydQ==" target="_blank">lin2crazy.ru</a></div>
+                        <div class="rates">x10000</div>
+                        <div class="chronicle">interlude</div>
+                        <div class="date">12.08.16</div>  
+						<div class="like"><span id="post-ratings-680" class="post-ratings" data-nonce="f5f1017b83"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.037546 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL2wybmVvLnJ1" target="_blank">l2neo.ru</a></div>
+                        <div class="rates">x100</div>
+                        <div class="chronicle">interlude</div>
+                        <div class="date">12.08.16</div>  
+						<div class="like"><span id="post-ratings-726" class="post-ratings" data-nonce="5928a9a2b1"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+W, [2016-09-09T01:08:45.038210 #2409]  WARN -- : UNIQUE constraint failed: servers.title, servers.chronicles, servers.rates, servers.date for page:
+ <div class="server">
+                    	<div class="name"><a href="/out/?url=aHR0cDovL2xhMndvZC5ydQ==" target="_blank">la2wod.ru</a></div>
+                        <div class="rates">x1111</div>
+                        <div class="chronicle">interlude</div>
+                        <div class="date">08.08.16</div>  
+						<div class="like"><span id="post-ratings-659" class="post-ratings" data-nonce="d3c41ee21c"><img src="http://l2tops.ru/wp-content/plugins/wp-postratings/images/heart/rating_1_on.png" alt="1 оценка, среднее: 1,00 из 1" class="post-ratings-image"><span>1</span></span></div>
+                  </div>
+E, [2016-09-09T01:08:45.038441 #2409] ERROR -- : When saving results: no such table: results

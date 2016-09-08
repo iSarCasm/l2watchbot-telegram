@@ -22,12 +22,12 @@ class Crawler
     connect
     extract_nodes_from_page.each do |sever_node|
       begin
-        server_db.execute(
+        @server_db.execute(
           "insert into servers (title, chronicles, rates, date) values ( ?, ?, ?, ? )",
           extract_data_from_node(sever_node)
         )
       rescue Exception => e
-        logger.warn "#{e} for page:\n #{sever_node}"
+        @logger.warn "#{e} for page:\n #{sever_node}"
       end
     end
     save_results
@@ -52,9 +52,9 @@ class Crawler
   end
 
   def save_results
-    server_count = server_db.execute("select COUNT(*) from servers")
+    server_count = @server_db.execute("select COUNT(*) from servers")
     begin
-      result_db.execute(
+      @result_db.execute(
         "insert into results (date, total_servers) values ( ?, ? )",
         [Time.now, server_count]
       )
