@@ -1,6 +1,6 @@
 require 'sqlite3'
 
-database = SQLite3::Database.new ".db/l2watchbot.db"
+database = SQLite3::Database.new "db/l2watchbot.db"
 
 database.execute <<-SQL
   create table servers (

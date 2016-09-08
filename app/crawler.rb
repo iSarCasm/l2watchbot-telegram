@@ -13,7 +13,7 @@ class Crawler
 
   def initialize
     @logger    = Logger.new('./log/logfile.log', 10, 2_048_000)
-    @database = SQLite3::Database.new ".db/l2watchbot.db"
+    @database = SQLite3::Database.new "db/l2watchbot.db"
     @agent = Mechanize.new
   end
 
