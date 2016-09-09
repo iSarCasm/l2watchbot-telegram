@@ -8,7 +8,7 @@ database  = PG.connect( dbname: "l2watchbot", user: "postgres", password: "postg
 
 
 Telegram::Bot::Client.run(token) do |bot|
-  responder = TelegramResponder.new(bot)
+  responder = TelegramResponder.new(bot, database)
   bot.listen do |message|
     responder.respond_to message
   end
