@@ -25,9 +25,9 @@ class TelegramResponder
       when '/recent'
         send_servers recent(@all, 14)
       when '/filter'
-        bot.api.send_message(chat_id: message.chat.id, text: "Not implemented yet!")
+        @bot.api.send_message(chat_id: message.chat.id, text: "Not implemented yet!")
       when '/notify'
-        bot.api.send_message(chat_id: message.chat.id, text: "Not implemented yet!")
+        @bot.api.send_message(chat_id: message.chat.id, text: "Not implemented yet!")
       end
     end
 
@@ -41,12 +41,12 @@ class TelegramResponder
     def send_servers(servers)
       servers.each do |s|
         text = "#{s[0]}\n#{s[1]} #{s[2]}\n#{s[3]}"
-        bot.api.send_message(chat_id: message.chat.id, text: text)
+        @bot.api.send_message(chat_id: message.chat.id, text: text)
       end
     end
 
     def help
-      bot.api.send_message(chat_id: message.chat.id, text: "Hello, #{message.from.first_name}. Command list:\n/soon\n/recent")
+      @bot.api.send_message(chat_id: message.chat.id, text: "Hello, #{message.from.first_name}. Command list:\n/soon\n/recent")
     end
 
     def soon(servers, days)
