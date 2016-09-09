@@ -41,6 +41,7 @@ GEM
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
     ntlm-http (0.1.1)
+    pg (0.18.4)
     pkg-config (1.1.7)
     pry (0.10.4)
       coderay (~> 1.1.0)
@@ -68,8 +69,9 @@ DEPENDENCIES
   awesome_print
   logger
   mechanize
+  pg
   pry
   telegram-bot-ruby
 
 BUNDLED WITH
-   1.12.5
+   1.13.0

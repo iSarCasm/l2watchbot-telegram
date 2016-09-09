@@ -1,19 +1,19 @@
-require 'sqlite3'
+require 'pg'
 
-database = SQLite3::Database.new "db/l2watchbot.db"
+database = PG.connect( dbname: "l2watchbot", user: "postgres", password: "postgres" )
 
-database.execute <<-SQL
+database.exec <<-SQL
   create table servers (
     title text,
     chronicles text,
     rates int,
     date text,
     created_at text,
-    unique (title, chronicles, rates, date)
+    CONSTRAINT uniq UNIQUE(title, chronicles, rates, date)
   );
 SQL
 
-database.execute <<-SQL
+database.exec <<-SQL
   create table results (
     date text,
     total_servers int
