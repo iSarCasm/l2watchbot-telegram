@@ -20,6 +20,8 @@ class TelegramResponder
       case message.text
       when '/start'
         help(message)
+      when '/help'
+        help(message)
       when '/soon'
         send_servers soon(@all, 7), message
       when '/recent'
@@ -44,11 +46,11 @@ class TelegramResponder
       servers.each do |s|
         day_diff = date_diff(Time.now, s[3])
         day_part =  if (day_diff > 0) then
-                      "(opens in #{day_diff} days)"
+                      "(откроется через #{day_diff} дней)"
                     elsif (day_diff < 0) then
-                      "(opened #{-day_diff} days ago)"
+                      "(открылся #{-day_diff} дней назад)"
                     else
-                      "(OPENS TODAY!)"
+                      "(ОТКРЫТИЕ СЕГОДНЯ)"
                     end
         text = "#{s[0]}\n#{s[1]} x#{s[2]}\n#{s[3]} #{day_part}"
         @bot.api.send_message(chat_id: message.chat.id, text: text)
@@ -56,11 +58,11 @@ class TelegramResponder
     end
 
     def help(message)
-      @bot.api.send_message(chat_id: message.chat.id, text: "Hello, #{message.from.first_name}. Command list:\n/soon\n/recent")
+      @bot.api.send_message(chat_id: message.chat.id, text: "Привет, #{message.from.first_name}. Список доступных команд:\n/soon\n/recent\n/info\n/help")
     end
 
     def info(message)
-      @bot.api.send_message(chat_id: message.chat.id, text: "Total servers: #{@all.length}")
+      @bot.api.send_message(chat_id: message.chat.id, text: "Всего серверов: #{@all.length}")
     end
 
     def soon(servers, days)
