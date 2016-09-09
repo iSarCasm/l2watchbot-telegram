@@ -22,7 +22,7 @@ class Crawler
     extract_nodes_from_page.each do |sever_node|
       begin
         @database.exec(
-          "insert into servers (title, chronicles, rates, date) values ($1, $2, $3, $4)",
+          "insert into servers (title, chronicles, rates, date, created_at) values ($1, $2, $3, $4, $5)",
           extract_data_from_node(sever_node)
         )
       rescue Exception => e
@@ -47,7 +47,7 @@ class Crawler
     chronicles  = node.at('.chronicle').text
     rates       = node.at('.rates').text[1..-1].to_i
     date        = node.at('.date').text
-    [title, chronicles, rates, date]
+    [title, chronicles, rates, date, Time.now.iso8601]
   end
 
   def save_results

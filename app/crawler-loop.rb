@@ -1,5 +1,5 @@
-require './crawler'
 require 'logger'
+require_relative 'crawler'
 
 SECONDS_IN_MIN  = 60
 MIN_IN_HOUR     = 60
