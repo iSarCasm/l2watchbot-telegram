@@ -1,10 +1,11 @@
 class TelegramResponder
-    def initialize(bot)
+    def initialize(bot, database)
       @bot = bot
+      @database = database
     end
 
     def respond_to(message)
-      @all = database.exec("SELECT * from servers").values
+      @all = @database.exec("SELECT * from servers").values
       case message
       when Telegram::Bot::Types::CallbackQuery
         respond_to_callback_query(message.data)
