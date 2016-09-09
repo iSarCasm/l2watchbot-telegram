@@ -8,16 +8,16 @@ class TelegramResponder
       @all = @database.exec("SELECT * from servers").values
       case message
       when Telegram::Bot::Types::CallbackQuery
-        respond_to_callback_query(message.data)
+        respond_to_callback_query(message)
       when Telegram::Bot::Types::Message
-        respond_to_text(message.text)
+        respond_to_text(message)
       end
     end
 
     private
 
-    def respond_to_text(text)
-      case text
+    def respond_to_text(message)
+      case message.text
       when '/start'
         help
       when '/soon'
@@ -31,8 +31,8 @@ class TelegramResponder
       end
     end
 
-    def respond_to_callback_query(data)
-      case data
+    def respond_to_callback_query(message)
+      case message.data
       when 'lol'
         p 'rofl'
       end
