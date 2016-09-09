@@ -76,5 +76,6 @@ class TelegramResponder
         end
         days += (i.even? ? -d : d)
       end
+      days
     end
 end
