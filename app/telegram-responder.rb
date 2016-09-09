@@ -50,13 +50,13 @@ class TelegramResponder
     end
 
     def soon(servers, days)
-      server.reject do |server|
+      servers.reject do |server|
         date_diff(Time.now, server[3]) > 0 && date_diff(Time.now, server[3]) <= days
       end
     end
 
     def recent(servers, days)
-      server.reject do |server|
+      servers.reject do |server|
         date_diff(Time.now, server[3]) < 0 && date_diff(Time.now, server[3]) >= days
       end
     end
