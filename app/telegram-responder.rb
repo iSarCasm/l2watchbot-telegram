@@ -19,11 +19,11 @@ class TelegramResponder
     def respond_to_text(message)
       case message.text
       when '/start'
-        help
+        help(message)
       when '/soon'
-        send_servers soon(@all, 14)
+        send_servers soon(@all, 14), message
       when '/recent'
-        send_servers recent(@all, 14)
+        send_servers recent(@all, 14), message
       when '/filter'
         @bot.api.send_message(chat_id: message.chat.id, text: "Not implemented yet!")
       when '/notify'
@@ -38,14 +38,14 @@ class TelegramResponder
       end
     end
 
-    def send_servers(servers)
+    def send_servers(servers, message)
       servers.each do |s|
         text = "#{s[0]}\n#{s[1]} #{s[2]}\n#{s[3]}"
         @bot.api.send_message(chat_id: message.chat.id, text: text)
       end
     end
 
-    def help
+    def help(message)
       @bot.api.send_message(chat_id: message.chat.id, text: "Hello, #{message.from.first_name}. Command list:\n/soon\n/recent")
     end
 
