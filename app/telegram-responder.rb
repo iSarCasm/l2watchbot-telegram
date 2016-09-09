@@ -43,9 +43,9 @@ class TelegramResponder
     def send_servers(servers, message)
       servers.each do |s|
         day_diff = date_diff(Time.now, s[3])
-        day_part =  if (date_diff > 0) then
+        day_part =  if (day_diff > 0) then
                       "(opens in #{day_diff}) days)"
-                    elsif (date_diff < 0) then
+                    elsif (day_diff < 0) then
                       "(opened #{day_diff}) days ago)"
                     else
                       "(OPENS TODAY!)"
