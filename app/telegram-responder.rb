@@ -24,10 +24,13 @@ class TelegramResponder
         help(message)
       when '/soon'
         send_servers soon(@all, 7), message
+        add_help_to_end(message)
       when '/recent'
         send_servers recent(@all, 7), message
+        add_help_to_end(message)
       when '/info'
         info(message)
+        add_help_to_end(message)
       when '/filter'
         @bot.api.send_message(chat_id: message.chat.id, text: "Not implemented yet!")
       when '/notify'
@@ -71,6 +74,10 @@ class TelegramResponder
       end.sort do |s1, s2|
         date_diff(Time.now, s1[3]) <=> date_diff(Time.now, s2[3])
       end
+    end
+
+    def add_help_to_end(message)
+      @bot.api.send_message(chat_id: message.chat.id, text: "Нужна помощь? /help")
     end
 
     def recent(servers, days)
