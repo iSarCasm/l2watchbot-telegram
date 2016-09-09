@@ -44,9 +44,9 @@ class TelegramResponder
       servers.each do |s|
         day_diff = date_diff(Time.now, s[3])
         day_part =  if (day_diff > 0) then
-                      "(opens in #{day_diff}) days)"
+                      "(opens in #{day_diff} days)"
                     elsif (day_diff < 0) then
-                      "(opened #{day_diff}) days ago)"
+                      "(opened #{day_diff} days ago)"
                     else
                       "(OPENS TODAY!)"
                     end
