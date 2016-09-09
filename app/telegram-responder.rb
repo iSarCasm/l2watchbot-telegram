@@ -40,7 +40,7 @@ class TelegramResponder
 
     def send_servers(servers, message)
       servers.each do |s|
-        text = "#{s[0]}\n#{s[1]} #{s[2]}\n#{s[3]}"
+        text = "#{s[0]}\n#{s[1]} x#{s[2]}\n#{s[3]}"
         @bot.api.send_message(chat_id: message.chat.id, text: text)
       end
     end
@@ -72,7 +72,7 @@ class TelegramResponder
           d = date.day + date.month*30 + date.year*365
         else
           parsed = date.split('.').map! { |x| x.to_i }
-          d = parsed[0] + parsed[1]*30 + parsed[2]*365
+          d = parsed[0] + parsed[1]*30 + (parsed[2]+2000)*365
         end
         days += (i.even? ? -d : d)
       end
