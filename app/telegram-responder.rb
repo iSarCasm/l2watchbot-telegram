@@ -21,9 +21,9 @@ class TelegramResponder
       when '/start'
         help(message)
       when '/soon'
-        send_servers soon(@all, 14), message
+        send_servers soon(@all, 7), message
       when '/recent'
-        send_servers recent(@all, 14), message
+        send_servers recent(@all, 7), message
       when '/info'
         info(message)
       when '/filter'
@@ -46,7 +46,7 @@ class TelegramResponder
         day_part =  if (day_diff > 0) then
                       "(opens in #{day_diff} days)"
                     elsif (day_diff < 0) then
-                      "(opened #{day_diff} days ago)"
+                      "(opened #{-day_diff} days ago)"
                     else
                       "(OPENS TODAY!)"
                     end
