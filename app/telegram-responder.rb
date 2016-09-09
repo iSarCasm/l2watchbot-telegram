@@ -25,7 +25,7 @@ class TelegramResponder
       when '/recent'
         send_servers recent(@all, 14), message
       when '/info'
-        info
+        info(message)
       when '/filter'
         @bot.api.send_message(chat_id: message.chat.id, text: "Not implemented yet!")
       when '/notify'
@@ -42,7 +42,15 @@ class TelegramResponder
 
     def send_servers(servers, message)
       servers.each do |s|
-        text = "#{s[0]}\n#{s[1]} x#{s[2]}\n#{s[3]}"
+        day_diff = date_diff(Time.now, s[3])
+        day_part =  if (date_diff > 0) then
+                      "(opens in #{day_diff}) days)"
+                    elsif (date_diff < 0) then
+                      "(opened #{day_diff}) days ago)"
+                    else
+                      "(OPENS TODAY!)"
+                    end
+        text = "#{s[0]}\n#{s[1]} x#{s[2]}\n#{s[3]} #{day_part}"
         @bot.api.send_message(chat_id: message.chat.id, text: text)
       end
     end
