@@ -72,7 +72,7 @@ class TelegramResponder
       servers.select do |server|
         date_diff(Time.now, server[3]) > 0 && date_diff(Time.now, server[3]) <= days
       end.sort do |s1, s2|
-        date_diff(Time.now, s1[3]) <=> date_diff(Time.now, s2[3])
+        date_diff(Time.now, s2[3]) <=> date_diff(Time.now, s1[3])
       end
     end
 
@@ -84,7 +84,7 @@ class TelegramResponder
       servers.select do |server|
         date_diff(Time.now, server[3]) < 0 && date_diff(Time.now, server[3]) >= -days
       end.sort do |s1, s2|
-        date_diff(Time.now, s2[3]) <=> date_diff(Time.now, s1[3])
+        date_diff(Time.now, s1[3]) <=> date_diff(Time.now, s2[3])
       end
     end
 
