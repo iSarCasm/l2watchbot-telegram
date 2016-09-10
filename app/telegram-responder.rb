@@ -8,7 +8,7 @@ class TelegramResponder
 
     def respond_to(message)
       @all = @database.exec("SELECT * from servers").values
-      @user = @database.exec("SELECT * from users WHERE user_id = $1", message.from.id.to_s).values
+      @user = @database.exec("SELECT * from users WHERE user_id = $1", [message.from.id.to_s]).values
       case message
       when Telegram::Bot::Types::CallbackQuery
         respond_to_callback_query(message)
