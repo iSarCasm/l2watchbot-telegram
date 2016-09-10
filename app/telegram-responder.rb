@@ -36,18 +36,20 @@ class TelegramResponder
         add_help_to_end(message)
       when '/filter'
         kb = [
-          Telegram::Bot::Types::InlineKeyboardButton.new(text: 'C1-C4', callback_data: 'C1-C4'),
-          Telegram::Bot::Types::InlineKeyboardButton.new(text: 'Interlude', callback_data: 'Interlude'),
-          Telegram::Bot::Types::InlineKeyboardButton.new(text: 'Interlude+', callback_data: 'Interlude+'),
-          Telegram::Bot::Types::InlineKeyboardButton.new(text: 'High five', callback_data: 'High five'),
-          Telegram::Bot::Types::InlineKeyboardButton.new(text: 'Epilogue', callback_data: 'Epilogue'),
-          Telegram::Bot::Types::InlineKeyboardButton.new(text: 'Classic', callback_data: 'Classic'),
-          Telegram::Bot::Types::InlineKeyboardButton.new(text: 'Freya and newer', callback_data: 'Freya and newer')
+          Telegram::Bot::Types::KeyboardButton.new(text: 'C1-C4'),
+          Telegram::Bot::Types::KeyboardButton.new(text: 'Interlude'),
+          Telegram::Bot::Types::KeyboardButton.new(text: 'Interlude+'),
+          Telegram::Bot::Types::KeyboardButton.new(text: 'High five'),
+          Telegram::Bot::Types::KeyboardButton.new(text: 'Epilogue'),
+          Telegram::Bot::Types::KeyboardButton.new(text: 'Classic',),
+          Telegram::Bot::Types::KeyboardButton.new(text: 'Freya and newer')
         ]
-        markup = Telegram::Bot::Types::InlineKeyboardMarkup.new(inline_keyboard: kb)
+        markup = Telegram::Bot::Types::ReplyKeyboardMarkup.new(keyboard: kb)
         @bot.api.send_message(chat_id: message.chat.id, text: 'Выберите хроники', reply_markup: markup)
       when '/notify'
         @bot.api.send_message(chat_id: message.chat.id, text: "Not implemented yet!")
+      else
+        @bot.api.send_message(chat_id: message.chat.id, text: message.text)
       end
     end
 
