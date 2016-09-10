@@ -45,7 +45,7 @@ class TelegramResponder
           Telegram::Bot::Types::InlineKeyboardButton.new(text: 'Freya and newer', callback_data: 'Freya and newer')
         ]
         markup = Telegram::Bot::Types::InlineKeyboardMarkup.new(inline_keyboard: kb)
-        bot.api.send_message(chat_id: message.chat.id, text: 'Выберите хроники', reply_markup: markup)
+        @bot.api.send_message(chat_id: message.chat.id, text: 'Выберите хроники', reply_markup: markup)
       when '/notify'
         @bot.api.send_message(chat_id: message.chat.id, text: "Not implemented yet!")
       end
