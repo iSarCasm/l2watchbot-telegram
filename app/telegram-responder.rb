@@ -7,8 +7,8 @@ class TelegramResponder
     end
 
     def respond_to(message)
-      @all = @database.exec("SELECT * from servers").values
-      @user = @database.exec("SELECT * from users WHERE user_id = $1", [message.from.id.to_s]).values
+      @all      = @database.exec("SELECT * from servers").values
+      @user     = User.new(@database, message.from.id)
       case message
       when Telegram::Bot::Types::CallbackQuery
         respond_to_callback_query(message)
@@ -36,15 +36,16 @@ class TelegramResponder
         add_help_to_end(message)
       when '/filter'
         kb = [
-          Telegram::Bot::Types::KeyboardButton.new(text: 'C1-C4'),
-          Telegram::Bot::Types::KeyboardButton.new(text: 'Interlude'),
-          Telegram::Bot::Types::KeyboardButton.new(text: 'Interlude+'),
-          Telegram::Bot::Types::KeyboardButton.new(text: 'High five'),
-          Telegram::Bot::Types::KeyboardButton.new(text: 'Epilogue'),
-          Telegram::Bot::Types::KeyboardButton.new(text: 'Classic',),
-          Telegram::Bot::Types::KeyboardButton.new(text: 'Freya and newer')
+          [Telegram::Bot::Types::KeyboardButton.new(text: 'C1-C4'),
+          Telegram::Bot::Types::KeyboardButton.new(text: 'Interlude')],
+          [Telegram::Bot::Types::KeyboardButton.new(text: 'Interlude+'),
+          Telegram::Bot::Types::KeyboardButton.new(text: 'High five')],
+          [Telegram::Bot::Types::KeyboardButton.new(text: 'Epilogue'),
+          Telegram::Bot::Types::KeyboardButton.new(text: 'Classic')],
+          Telegram::Bot::Types::KeyboardButton.new(text: 'Freya and newer'),
+          Telegram::Bot::Types::KeyboardButton.new(text: 'Хватит!')
         ]
-        markup = Telegram::Bot::Types::ReplyKeyboardMarkup.new(keyboard: kb)
+        markup = Telegram::Bot::Types::ReplyKeyboardMarkup.new(keyboard: kb, one_time_keyboard: true)
         @bot.api.send_message(chat_id: message.chat.id, text: 'Выберите хроники', reply_markup: markup)
       when '/notify'
         @bot.api.send_message(chat_id: message.chat.id, text: "Not implemented yet!")

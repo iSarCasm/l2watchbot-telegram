@@ -1,13 +1,12 @@
 #!/usr/bin/env ruby
-
 require 'telegram/bot'
 require 'pg'
 require_relative '../app/telegram-responder'
+# Models
+require_relative '../models/user'
 
 token = '267520876:AAHU_jHQ-kp8vSpklbX4IUMfmmUtzw3T_54'
-
 database  = PG.connect( dbname: "l2watchbot", user: "postgres", password: "postgres" )
-
 
 Telegram::Bot::Client.run(token) do |bot|
   responder = TelegramResponder.new(bot, database)
