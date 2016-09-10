@@ -12,7 +12,7 @@ database  = PG.connect( dbname: "l2watchbot", user: "postgres", password: "postg
 Telegram::Bot::Client.run(token) do |bot|
   responder = TelegramResponder.new(bot, database)
   bot.listen do |message|
-    database.exec "INSERT INTO users (user_id) values ($1)", message.from.id.to_s
+    database.exec "INSERT INTO users (user_id) values ($1)", [message.from.id.to_s]
     responder.respond_to message
   end
 end
