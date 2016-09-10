@@ -6,6 +6,7 @@ gem 'mechanize'
 
 # database
 gem 'pg'
+gem 'json'
 
 # fancy stuff
 gem 'logger'

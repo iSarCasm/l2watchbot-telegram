@@ -2,24 +2,48 @@
 
 require 'pg'
 
-Dir.mkdir("../log")
+Dir.mkdir("../log") rescue puts 'Folder "log" already exists.'
 
 database = PG.connect( dbname: "l2watchbot", user: "postgres", password: "postgres" )
 
-database.exec <<-SQL
-  create table servers (
-    title text,
-    chronicles text,
-    rates int,
-    date text,
-    created_at text,
-    CONSTRAINT uniq UNIQUE(title, chronicles, rates, date)
-  );
-SQL
+begin
+  database.exec <<-SQL
+    create table servers (
+      title text,
+      chronicles text,
+      rates int,
+      date text,
+      created_at text,
+      CONSTRAINT uniq UNIQUE(title, chronicles, rates, date)
+    );
+  SQL
+rescue Exception => e
+  puts e
+end
 
-database.exec <<-SQL
-  create table results (
-    date text,
-    total_servers int
-  )
-SQL
+begin
+  database.exec <<-SQL
+    create table results (
+      date text,
+      total_servers int
+    )
+  SQL
+rescue Exception => e
+  puts e
+end
+
+begin
+  database.exec <<-SQL
+    create table users (
+      user_id text,
+      filter_from int,
+      filter_to int,
+      filter_chronicle text,
+      filter_rates_from int,
+      filter_rates_to int,
+      CONSTRAINT uniq2 UNIQUE(user_id)
+    )
+  SQL
+rescue Exception => e
+  puts e
+end

@@ -1,3 +1,5 @@
+require 'json'
+
 class TelegramResponder
     def initialize(bot, database)
       @bot = bot
@@ -6,6 +8,7 @@ class TelegramResponder
 
     def respond_to(message)
       @all = @database.exec("SELECT * from servers").values
+      @user = @database.exec("SELECT * from users WHERE user_id = $1", message.from.id.to_s).values
       case message
       when Telegram::Bot::Types::CallbackQuery
         respond_to_callback_query(message)
@@ -32,7 +35,17 @@ class TelegramResponder
         info(message)
         add_help_to_end(message)
       when '/filter'
-        @bot.api.send_message(chat_id: message.chat.id, text: "Not implemented yet!")
+        kb = [
+          Telegram::Bot::Types::InlineKeyboardButton.new(text: 'C1-C4', callback_data: 'C1-C4'),
+          Telegram::Bot::Types::InlineKeyboardButton.new(text: 'Interlude', callback_data: 'Interlude'),
+          Telegram::Bot::Types::InlineKeyboardButton.new(text: 'Interlude+', callback_data: 'Interlude+')
+          Telegram::Bot::Types::InlineKeyboardButton.new(text: 'High five', callback_data: 'High five')
+          Telegram::Bot::Types::InlineKeyboardButton.new(text: 'Epilogue', callback_data: 'Epilogue')
+          Telegram::Bot::Types::InlineKeyboardButton.new(text: 'Classic', callback_data: 'Classic')
+          Telegram::Bot::Types::InlineKeyboardButton.new(text: 'Freya and newer', callback_data: 'Freya and newer')
+        ]
+        markup = Telegram::Bot::Types::InlineKeyboardMarkup.new(inline_keyboard: kb)
+        bot.api.send_message(chat_id: message.chat.id, text: 'Выберите хроники', reply_markup: markup)
       when '/notify'
         @bot.api.send_message(chat_id: message.chat.id, text: "Not implemented yet!")
       end
@@ -40,7 +53,19 @@ class TelegramResponder
 
     def respond_to_callback_query(message)
       case message.data
-      when 'lol'
+      when 'C1-C4'
+        p 'rofl'
+      when 'Interlude'
+        p 'rofl'
+      when 'Interlude+'
+        p 'rofl'
+      when 'High five'
+        p 'rofl'
+      when 'Epilogue'
+        p 'rofl'
+      when 'Classic'
+        p 'rofl'
+      when 'Freya and newer'
         p 'rofl'
       end
     end
