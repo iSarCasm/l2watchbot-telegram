@@ -1,4 +1,8 @@
+#!/usr/bin/env ruby
+
 require 'pg'
+
+Dir.mkdir("../log")
 
 database = PG.connect( dbname: "l2watchbot", user: "postgres", password: "postgres" )
 

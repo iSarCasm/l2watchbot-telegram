@@ -1,6 +1,8 @@
+#!/usr/bin/env ruby
+
 require 'telegram/bot'
 require 'pg'
-require_relative 'telegram-responder'
+require_relative '../app/telegram-responder'
 
 token = '267520876:AAHU_jHQ-kp8vSpklbX4IUMfmmUtzw3T_54'
 

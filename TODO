@@ -1,0 +1,13 @@
+TODO:
+  Rakefile
+  ENV token
+  filter & notify
+  locales
+  refactor
+  capistrano
+  rspec
+  readme
+  emailer
+
+DONE:
+  bin folder

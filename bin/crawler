@@ -1,5 +1,7 @@
+#!/usr/bin/env ruby
+
 require 'logger'
-require_relative 'crawler'
+require_relative '../app/crawler'
 
 SECONDS_IN_MIN  = 60
 MIN_IN_HOUR     = 60
