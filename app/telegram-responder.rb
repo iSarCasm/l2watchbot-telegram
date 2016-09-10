@@ -38,10 +38,10 @@ class TelegramResponder
         kb = [
           Telegram::Bot::Types::InlineKeyboardButton.new(text: 'C1-C4', callback_data: 'C1-C4'),
           Telegram::Bot::Types::InlineKeyboardButton.new(text: 'Interlude', callback_data: 'Interlude'),
-          Telegram::Bot::Types::InlineKeyboardButton.new(text: 'Interlude+', callback_data: 'Interlude+')
-          Telegram::Bot::Types::InlineKeyboardButton.new(text: 'High five', callback_data: 'High five')
-          Telegram::Bot::Types::InlineKeyboardButton.new(text: 'Epilogue', callback_data: 'Epilogue')
-          Telegram::Bot::Types::InlineKeyboardButton.new(text: 'Classic', callback_data: 'Classic')
+          Telegram::Bot::Types::InlineKeyboardButton.new(text: 'Interlude+', callback_data: 'Interlude+'),
+          Telegram::Bot::Types::InlineKeyboardButton.new(text: 'High five', callback_data: 'High five'),
+          Telegram::Bot::Types::InlineKeyboardButton.new(text: 'Epilogue', callback_data: 'Epilogue'),
+          Telegram::Bot::Types::InlineKeyboardButton.new(text: 'Classic', callback_data: 'Classic'),
           Telegram::Bot::Types::InlineKeyboardButton.new(text: 'Freya and newer', callback_data: 'Freya and newer')
         ]
         markup = Telegram::Bot::Types::InlineKeyboardMarkup.new(inline_keyboard: kb)
