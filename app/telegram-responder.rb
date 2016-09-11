@@ -28,7 +28,7 @@ class TelegramResponder
   def respond_to(message)
     @all      = @database.exec("SELECT * from servers").values
     @user     = User.new(@database, message.from.id)
-    I18n.locale = (@user.lang || :en).to_sym
+    I18n.locale = @user.lang.to_sym rescue I18n.locale = :en
     case message
     when Telegram::Bot::Types::CallbackQuery
       respond_to_callback_query(message)
