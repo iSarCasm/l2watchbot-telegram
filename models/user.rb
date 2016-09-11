@@ -11,7 +11,7 @@ class User
     @filter_chronicle   = values[3].to_s
     @filter_rates_from  = values[4].to_s
     @filter_rates_to    = values[5].to_s
-    @lang               = values[6].to_s
+    @lang               = values[6]
     @last_notified      = values[7].to_s
     @notify_period      = values[8].to_i
     puts values
