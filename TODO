@@ -1,11 +1,11 @@
 TODO:
+  emailer
   Rakefile
-  ENV token
-  filter & notify
   refactor
   readme
-  emailer
+  filter & notify
 
 DONE:
-  locales
+  ENV token
   bin folder
+  locales

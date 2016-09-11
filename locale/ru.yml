@@ -1,9 +1,16 @@
 ru:
   select_chronicle: 'Выберите хроники'
   opens_in_x_days: "(откроется через %{x} дней)"
-  opened_x_days_ago: "(открылся %{-x} дней назад)"
+  opened_x_days_ago: "(открылся %{x} дней назад)"
   opens_today: "(ОТКРЫТИЕ СЕГОДНЯ)"
   command_list: "Список доступных команд:"
   need_help: "Нужна помощь? /help"
   enough: 'Хватит!'
   total_servers: "Всего серверов:"
+  other: 'Другие'
+  selected_chronicles: "Выбранные хроники: %{x}"
+  choose_rates: "Выберите рейты:"
+  dont_notify: "Не напоминать!"
+  notify_everyday: "Напоминать каждый день."
+  notify_everyweek: "Напоминать каждую неделю."
+  notify_everymonth: "Напоминать каждый месяц."

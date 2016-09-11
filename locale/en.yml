@@ -7,3 +7,10 @@ en:
   need_help: "Feeling puzzled? /help"
   enough: 'Enough!'
   total_servers: "Total servers:"
+  other: 'Other'
+  selected_chronicles: "Selected chronicles: %{x}"
+  choose_rates: "Choose rates: "
+  dont_notify: "Dont notify!"
+  notify_everyday: "Notify me every day."
+  notify_everyweek: "Notify me every week."
+  notify_everymonth: "Notify me every month."
