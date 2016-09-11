@@ -43,10 +43,10 @@ class TelegramResponder
           [Telegram::Bot::Types::KeyboardButton.new(text: 'Epilogue'),
           Telegram::Bot::Types::KeyboardButton.new(text: 'Classic')],
           Telegram::Bot::Types::KeyboardButton.new(text: 'Freya and newer'),
-          Telegram::Bot::Types::KeyboardButton.new(text: t('enough'))
+          Telegram::Bot::Types::KeyboardButton.new(text: I18n.t('enough'))
         ]
         markup = Telegram::Bot::Types::ReplyKeyboardMarkup.new(keyboard: kb, one_time_keyboard: true)
-        @bot.api.send_message(chat_id: message.chat.id, text: t('select_chronicle'), reply_markup: markup)
+        @bot.api.send_message(chat_id: message.chat.id, text: I18n.t('select_chronicle'), reply_markup: markup)
       when '/notify'
         @bot.api.send_message(chat_id: message.chat.id, text: "Not implemented yet!")
       else
@@ -77,11 +77,11 @@ class TelegramResponder
       servers.each do |s|
         day_diff = date_diff(Time.now, s[3])
         day_part =  if (day_diff > 0) then
-                      t('opens_in_x_days', x: day_diff)
+                      I18n.t('opens_in_x_days', x: day_diff)
                     elsif (day_diff < 0) then
-                      t('opened_x_days_ago', x: -day_diff)
+                      I18n.t('opened_x_days_ago', x: -day_diff)
                     else
-                      t('opens_today')
+                      I18n.t('opens_today')
                     end
         text = "#{s[0]}\n#{s[1]} x#{s[2]}\n#{s[3]} #{day_part}"
         @bot.api.send_message(chat_id: message.chat.id, text: text)
@@ -89,11 +89,11 @@ class TelegramResponder
     end
 
     def help(message)
-      @bot.api.send_message(chat_id: message.chat.id, text: "#{t('command_list')}\n/soon\n/recent\n/info\n/help")
+      @bot.api.send_message(chat_id: message.chat.id, text: "#{I18n.t('command_list')}\n/soon\n/recent\n/info\n/help")
     end
 
     def info(message)
-      @bot.api.send_message(chat_id: message.chat.id, text: "Всего серверов: #{@all.length}")
+      @bot.api.send_message(chat_id: message.chat.id, text: "#{I18n.t('total_servers')} #{@all.length}")
     end
 
     def soon(servers, days)

@@ -6,3 +6,4 @@ ru:
   command_list: "Список доступных команд:"
   need_help: "Нужна помощь? /help"
   enough: 'Хватит!'
+  total_servers: "Всего серверов:"

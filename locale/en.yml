@@ -6,3 +6,4 @@ en:
   command_list: "Command list:"
   need_help: "Feeling puzzled? /help"
   enough: 'Enough!'
+  total_servers: "Total servers:"
