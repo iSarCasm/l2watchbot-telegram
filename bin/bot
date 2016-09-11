@@ -9,7 +9,7 @@ require 'i18n'
 I18n.load_path = ["#{__dir__}/../locale/en.yml", "#{__dir__}/../locale/ru.yml"]
 I18n.locale = :en
 
-token = '267520876:AAHU_jHQ-kp8vSpklbX4IUMfmmUtzw3T_54'
+token = ENV["L2WATCHBOT_TOKEN"]
 database  = PG.connect( dbname: "l2watchbot", user: "postgres", password: "postgres" )
 
 Telegram::Bot::Client.run(token) do |bot|

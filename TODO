@@ -2,10 +2,10 @@ TODO:
   Rakefile
   ENV token
   filter & notify
-  locales
   refactor
   readme
   emailer
 
 DONE:
+  locales
   bin folder
