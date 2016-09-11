@@ -88,12 +88,23 @@ def filter(api, servers, user)
   add_help_to_end(api, user)
 end
 
+SECONDS_IN_MIN  = 60
+MIN_IN_HOUR     = 60
+SECONDS_IN_HOUR = SECONDS_IN_MIN * MIN_IN_HOUR
 
-api = Telegram::Bot::Api.new(token)
-servers = database.exec("SELECT * from servers").values
-users = database.exec("SELECT * from users").values
-users.each do |user|
-  if (user[7].nil? && !user[8].nil?) || date_diff(Time.new(user[7]), Time.now) >= user[8].to_i then
-    filter(api, servers, user)
+loop do
+  begin
+    api = Telegram::Bot::Api.new(token)
+    servers = database.exec("SELECT * from servers").values
+    users = database.exec("SELECT * from users").values
+    users.each do |user|
+      if (user[7].nil? && !user[8].nil?) || date_diff(Time.new(user[7]), Time.now) >= user[8].to_i then
+        filter(api, servers, user)
+      end
+    end
+  rescue Exception => e
+    # logger.fatal e
+    # logger.fatal e.backtrace
   end
+  sleep(SECONDS_IN_HOUR * 1)
 end
