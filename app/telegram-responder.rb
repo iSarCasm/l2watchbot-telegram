@@ -1,5 +1,3 @@
-require 'json'
-
 class TelegramResponder
   def initialize(bot, database)
     @bot = bot
@@ -28,6 +26,7 @@ class TelegramResponder
   def respond_to(message)
     @all      = @database.exec("SELECT * from servers").values
     @user     = User.new(@database, message.from.id)
+    @user.chat_id = message.chat.id
     I18n.locale = (@user.lang || :en).to_sym
     case message
     when Telegram::Bot::Types::CallbackQuery
@@ -63,8 +62,18 @@ class TelegramResponder
     when '/filter'
       clear_filter
       ask_filter_chronicle(message)
+    when '/lowrate'
+      send_servers(from_to(apply_rates_filter(@all, 0, 20), -14, 14), message)
+      add_help_to_end(message)
+    when '/multicraft'
+      send_servers(from_to(apply_rates_filter(@all, 20, 200), -14, 14), message)
+      add_help_to_end(message)
+    when '/pvprate'
+      send_servers(from_to(apply_rates_filter(@all, 200, 99999999), -14, 14), message)
+      add_help_to_end(message)
     when '/notify'
-      @bot.api.send_message(chat_id: message.chat.id, text: "Not implemented yet!")
+      clear_filter
+      ask_filter_chronicle(message)
     when 'C1-C4'
       @user.filter_chronicle = @user.filter_chronicle + ['c1', 'c2', 'c3', 'c4']
       send_chronicle_filter(message)
@@ -197,7 +206,7 @@ class TelegramResponder
   end
 
   def help(message)
-    @bot.api.send_message(chat_id: message.chat.id, text: "#{I18n.t('command_list')}\n/soon\n/recent\n/filter\n/info\n/help")
+    @bot.api.send_message(chat_id: message.chat.id, text: "#{I18n.t('command_list')}\n/soon\n/recent\n/lowrate\n/multicraft\n/pvprate\n/filter\n/info\n/help")
   end
 
   def info(message)
@@ -228,7 +237,7 @@ class TelegramResponder
     servers.select do |server|
       date_diff(Time.now, server[3]) >= from && date_diff(Time.now, server[3]) <= to
     end.sort do |s1, s2|
-      date_diff(Time.now, s2[3]) <=> date_diff(Time.now, s1[3])
+      date_diff(Time.now, s1[3]) <=> date_diff(Time.now, s2[3])
     end
   end
 

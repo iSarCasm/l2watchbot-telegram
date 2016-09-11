@@ -64,3 +64,11 @@ begin
 rescue Exception => e
   puts e
 end
+
+begin
+  database.exec <<-SQL
+    ALTER TABLE users ADD COLUMN chat_id text;
+  SQL
+rescue Exception => e
+  puts e
+end

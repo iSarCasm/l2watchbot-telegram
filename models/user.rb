@@ -1,5 +1,7 @@
+require 'json'
+
 class User
-  attr_reader :user_id, :filter_from, :filter_to, :filter_rates_from, :filter_rates_to, :lang, :last_notified, :notify_period
+  attr_reader :user_id, :filter_from, :filter_to, :filter_rates_from, :filter_rates_to, :lang, :last_notified, :notify_period, :chat_id
 
   def initialize(db, id)
     @db       = db
@@ -14,6 +16,7 @@ class User
     @lang               = values[6]
     @last_notified      = values[7].to_s
     @notify_period      = values[8].to_i
+    @chat_id            = values[9].to_s
     puts values
   end
 
@@ -60,5 +63,10 @@ class User
   def notify_period=(val)
     @db.exec "UPDATE users SET notify_period = $1 WHERE user_id = $2;", [val.to_i, @user_id.to_s]
     @notify_period = val.to_i
+  end
+
+  def chat_id=(val)
+    @db.exec "UPDATE users SET chat_id = $1 WHERE user_id = $2;", [val.to_s, @user_id.to_s]
+    @chat_id = val.to_i
   end
 end

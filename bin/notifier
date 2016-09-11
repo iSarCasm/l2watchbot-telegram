@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 require 'telegram/bot'
 require 'pg'
+require 'json'
 require_relative '../app/telegram-responder'
 # Models
 require_relative '../models/user'
@@ -11,10 +12,88 @@ I18n.load_path = ["#{__dir__}/../locale/en.yml", "#{__dir__}/../locale/ru.yml"]
 token = ENV["L2WATCHBOT_TOKEN"]
 database  = PG.connect( dbname: "l2watchbot", user: "postgres", password: "postgres" )
 
-Telegram::Bot::Client.run(token) do |bot|
-  responder = TelegramResponder.new(bot, database)
-  bot.listen do |message|
-    database.exec "INSERT INTO users (user_id) values ($1)", [message.from.id.to_s] rescue nil
-    responder.respond_to message
+def date_diff(*dates)
+  days = 0
+  dates.each_with_index do |date, i|
+    if date.is_a? Time then
+      d = date.day + date.month*30 + date.year*365
+    else
+      parsed = date.split('.').map! { |x| x.to_i }
+      d = parsed[0] + parsed[1]*30 + (parsed[2]+2000)*365
+    end
+    days += (i.even? ? -d : d)
+  end
+  days
+end
+
+def send_servers(api, servers, user)
+  p servers
+  servers.each do |s|
+    day_diff = date_diff(Time.now, s[3])
+    day_part =  if (day_diff > 0) then
+                  I18n.t('opens_in_x_days', x: day_diff)
+                elsif (day_diff < 0) then
+                  I18n.t('opened_x_days_ago', x: -day_diff)
+                else
+                  I18n.t('opens_today')
+                end
+    text = "#{s[0]}\n#{s[1]} x#{s[2]}\n#{s[3]} #{day_part}"
+    api.send_message(chat_id: user[9], text: text)
+  end
+end
+
+def from_to(servers, from, to)
+  servers.select do |server|
+    date_diff(Time.now, server[3]) >= from && date_diff(Time.now, server[3]) <= to
+  end.sort do |s1, s2|
+    date_diff(Time.now, s1[3]) <=> date_diff(Time.now, s2[3])
+  end
+end
+
+def apply_chonicle_filter(servers, chronicles)
+  servers.select do |server|
+    chronicles.include? server[1]
+  end
+end
+
+def apply_rates_filter(servers, from, to)
+  servers.select do |server|
+    server[2].to_i >= from.to_i && server[2].to_i <= to.to_i
+  end
+end
+
+
+def add_help_to_end(api, user)
+  api.send_message(chat_id: user[9], text: I18n.t('need_help'))
+end
+
+def filter(api, servers, user)
+  send_servers(
+    api,
+    from_to(
+      apply_chonicle_filter(
+        apply_rates_filter(
+          servers,
+          user[4],
+          user[5]
+        ),
+        JSON.parse(user[3])
+      ),
+      -14,
+      14
+    ),
+    user
+  )
+  api.send_message(chat_id: user[9], text: I18n.t('your_feed'))
+  add_help_to_end(api, user)
+end
+
+
+api = Telegram::Bot::Api.new(token)
+servers = database.exec("SELECT * from servers").values
+users = database.exec("SELECT * from users").values
+users.each do |user|
+  if (user[7].nil? && !user[8].nil?) || date_diff(Time.new(user[7]), Time.now) >= user[8].to_i then
+    filter(api, servers, user)
   end
 end

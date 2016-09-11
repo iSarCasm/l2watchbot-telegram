@@ -3,9 +3,10 @@ TODO:
   Rakefile
   refactor
   readme
-  filter & notify
 
 DONE:
+  lowrate/pvprate
+  filter & notify
   ENV token
   bin folder
   locales
