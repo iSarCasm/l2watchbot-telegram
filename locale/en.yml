@@ -1,0 +1,8 @@
+en:
+  select_chronicle: 'Choose chronicles'
+  opens_in_x_days: "(opens in %{x} days)"
+  opened_x_days_ago: "(opened %{x} days ago)"
+  opens_today: "(OPENS TODAY!)"
+  command_list: "Command list:"
+  need_help: "Feeling puzzled? /help"
+  enough: 'Enough!'

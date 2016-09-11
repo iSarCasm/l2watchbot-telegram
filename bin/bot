@@ -4,6 +4,10 @@ require 'pg'
 require_relative '../app/telegram-responder'
 # Models
 require_relative '../models/user'
+# I18n
+require 'i18n'
+I18n.load_path = ['*.yml']
+I18n.locale = :en
 
 token = '267520876:AAHU_jHQ-kp8vSpklbX4IUMfmmUtzw3T_54'
 database  = PG.connect( dbname: "l2watchbot", user: "postgres", password: "postgres" )

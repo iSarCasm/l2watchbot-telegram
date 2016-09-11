@@ -1,0 +1,8 @@
+ru:
+  select_chronicle: 'Выберите хроники'
+  opens_in_x_days: "(откроется через %{x} дней)"
+  opened_x_days_ago: "(открылся %{-x} дней назад)"
+  opens_today: "(ОТКРЫТИЕ СЕГОДНЯ)"
+  command_list: "Список доступных команд:"
+  need_help: "Нужна помощь? /help"
+  enough: 'Хватит!'

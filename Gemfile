@@ -3,6 +3,7 @@ source "https://rubygems.org"
 # bot and crawler
 gem 'telegram-bot-ruby'
 gem 'mechanize'
+gem 'i18n'
 
 # database
 gem 'pg'
