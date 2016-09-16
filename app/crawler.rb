@@ -73,7 +73,7 @@ class Crawler
       subject 'L2Watchbot Crawler warning!'
       body    "While scanning #{SOURCE_WEBSITE} at #{Time.now.to_s} found only #{server_count} servers."
     end
-    mail.delivery_method :smtp
+    mail.delivery_method :smtp, {:enable_starttls_auto => true}
     mail.deliver!
     @logger.warn mail.to_s
   end
