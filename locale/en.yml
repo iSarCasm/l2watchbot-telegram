@@ -15,4 +15,4 @@ en:
   notify_everyweek: "Notify me every week."
   notify_everymonth: "Notify me every month."
   should_we_notify: "Would you like to receive notifications?"
-  your_feed: "Notification :) Use /notify to change notification settings."
+  your_feed: "Notification :) Use /notify to change notifications. Or /reset to disable."

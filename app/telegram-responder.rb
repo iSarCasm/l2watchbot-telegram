@@ -100,19 +100,15 @@ class TelegramResponder
       ask_filter_chronicle(message)
     when I18n.t('enough')
       ask_filter_rates(message)
-    when '0-15'
+    when 'Low-Rate'
       @user.filter_rates_from = 0
       @user.filter_rates_to = 15
       ask_for_notifies(message)
-    when '15-100'
+    when 'Multi-Craft'
       @user.filter_rates_from = 15
-      ask_for_notifies(message)
-      @user.filter_rates_to = 100
-    when '100-250'
-      @user.filter_rates_from = 100
       @user.filter_rates_to = 250
       ask_for_notifies(message)
-    when '250+'
+    when 'PVP-Rate'
       @user.filter_rates_from = 250
       @user.filter_rates_to = 99999999
       ask_for_notifies(message)
@@ -124,22 +120,22 @@ class TelegramResponder
       @user.lang = 'en'
       I18n.locale = :en
       add_help_to_end(message)
-      when I18n.t('dont_notify')
-        @user.last_notified = Time.now.iso8601
-        filter(message)
-        @user.notify_period = nil
-      when I18n.t('notify_everyday')
-        @user.last_notified = Time.now.iso8601
-        filter(message)
-        @user.notify_period = 1
-      when I18n.t('notify_everyweek')
-        @user.last_notified = Time.now.iso8601
-        filter(message)
-        @user.notify_period = 7
-      when I18n.t('notify_everymonth')
-        @user.last_notified = Time.now.iso8601
-        filter(message)
-        @user.notify_period = 30
+    when '/reset'
+      @user.last_notified = Time.now.iso8601
+      filter(message)
+      @user.notify_period = nil
+    when I18n.t('notify_everyday')
+      @user.last_notified = Time.now.iso8601
+      filter(message)
+      @user.notify_period = 1
+    when I18n.t('notify_everyweek')
+      @user.last_notified = Time.now.iso8601
+      filter(message)
+      @user.notify_period = 7
+    when I18n.t('notify_everymonth')
+      @user.last_notified = Time.now.iso8601
+      filter(message)
+      @user.notify_period = 30
     else
       @bot.api.send_message(chat_id: message.chat.id, text: message.text)
     end
@@ -181,10 +177,9 @@ class TelegramResponder
 
   def ask_filter_rates(message)
     kb = [
-      Telegram::Bot::Types::KeyboardButton.new(text: '0-15'),
-      Telegram::Bot::Types::KeyboardButton.new(text: '15-100'),
-      Telegram::Bot::Types::KeyboardButton.new(text: '100-250'),
-      Telegram::Bot::Types::KeyboardButton.new(text: '250+'),
+      Telegram::Bot::Types::KeyboardButton.new(text: 'Low-Rate'),
+      Telegram::Bot::Types::KeyboardButton.new(text: 'Multi-Craft'),
+      Telegram::Bot::Types::KeyboardButton.new(text: 'PVP-Rate'),
     ]
     markup = Telegram::Bot::Types::ReplyKeyboardMarkup.new(keyboard: kb, one_time_keyboard: true)
     @bot.api.send_message(chat_id: message.chat.id, text: I18n.t('choose_rates'), reply_markup: markup)
@@ -192,7 +187,6 @@ class TelegramResponder
 
   def ask_for_notifies(message)
     kb = [
-      Telegram::Bot::Types::KeyboardButton.new(text: I18n.t('dont_notify')),
       Telegram::Bot::Types::KeyboardButton.new(text: I18n.t('notify_everyday')),
       Telegram::Bot::Types::KeyboardButton.new(text: I18n.t('notify_everyweek')),
       Telegram::Bot::Types::KeyboardButton.new(text: I18n.t('notify_everymonth')),
