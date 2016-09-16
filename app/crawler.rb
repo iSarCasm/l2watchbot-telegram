@@ -73,6 +73,7 @@ class Crawler
       subject 'L2Watchbot Crawler warning!'
       body    "While scanning #{SOURCE_WEBSITE} at #{Time.now.to_s} found only #{server_count} servers."
     end
-    @logger.warn mail.to_s 
+    mail.deliver!
+    @logger.warn mail.to_s
   end
 end
