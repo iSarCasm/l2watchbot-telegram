@@ -2,6 +2,7 @@ require 'mechanize'
 require 'pg'
 require 'singleton'
 require 'logger'
+require 'mail'
 
 require 'awesome_print'
 require 'pry'
@@ -58,8 +59,19 @@ class Crawler
         [Time.now.iso8601, server_count]
       )
       @logger.info "Total servers: #{server_count}"
+      send_warn_email(server_count)
     rescue Exception => e
       @logger.error "When saving results: #{e}"
+    end
+  end
+
+  def send_warn_email(server_count)
+    return if server_count > 50     # meh
+    @logger.warn Mail.new do
+      from    'crawler@l2watch.bot'
+      to      'sarcasm008@gmail.com'
+      subject 'L2Watchbot Crawler warning!'
+      body    "While scanning #{SOURCE_WEBSITE} at #{Time.now.to_s} found only #{server_count} servers."
     end
   end
 end

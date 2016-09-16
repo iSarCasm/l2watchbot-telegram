@@ -51,10 +51,10 @@ class TelegramResponder
     when '/help'
       help(message)
     when '/soon'
-      send_servers soon(@all, 7), message
+      send_servers soon(@all, 14), message
       add_help_to_end(message)
     when '/recent'
-      send_servers recent(@all, 7), message
+      send_servers recent(@all, 14), message
       add_help_to_end(message)
     when '/info'
       info(message)
@@ -63,13 +63,13 @@ class TelegramResponder
       clear_filter
       ask_filter_chronicle(message)
     when '/lowrate'
-      send_servers(from_to(apply_rates_filter(@all, 0, 20), -14, 14), message)
+      send_servers(from_to(apply_rates_filter(@all, 0, 20), -21, 30), message)
       add_help_to_end(message)
     when '/multicraft'
-      send_servers(from_to(apply_rates_filter(@all, 20, 200), -14, 14), message)
+      send_servers(from_to(apply_rates_filter(@all, 20, 200), -21, 30), message)
       add_help_to_end(message)
     when '/pvprate'
-      send_servers(from_to(apply_rates_filter(@all, 200, 99999999), -14, 14), message)
+      send_servers(from_to(apply_rates_filter(@all, 200, 99999999), -21, 30), message)
       add_help_to_end(message)
     when '/notify'
       clear_filter
@@ -200,7 +200,7 @@ class TelegramResponder
   end
 
   def help(message)
-    @bot.api.send_message(chat_id: message.chat.id, text: "#{I18n.t('command_list')}\n/soon\n/recent\n/lowrate\n/multicraft\n/pvprate\n/filter\n/info\n/help")
+    @bot.api.send_message(chat_id: message.chat.id, text: "#{I18n.t('command_list')}\n/soon\n/recent\n/lowrate\n/multicraft\n/pvprate\n/notify\n/help")
   end
 
   def info(message)
