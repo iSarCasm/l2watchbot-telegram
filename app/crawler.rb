@@ -68,7 +68,7 @@ class Crawler
   def send_warn_email(server_count)
     return if server_count > 250     # meh
     mail = Mail.new do
-      # from    'crawler@l2watch.bot'
+      from    'root@l2watch.bot'
       to      'sarcasm008@gmail.com'
       subject 'L2Watchbot Crawler warning!'
       body    "While scanning #{SOURCE_WEBSITE} at #{Time.now.to_s} found only #{server_count} servers."
