@@ -92,6 +92,8 @@ SECONDS_IN_MIN  = 60
 MIN_IN_HOUR     = 60
 SECONDS_IN_HOUR = SECONDS_IN_MIN * MIN_IN_HOUR
 
+logger = Logger.new("#{__dir__}/../log/notifier.log", 'daily')
+
 loop do
   begin
     api = Telegram::Bot::Api.new(token)
@@ -103,8 +105,8 @@ loop do
       end
     end
   rescue Exception => e
-    # logger.fatal e
-    # logger.fatal e.backtrace
+    logger.fatal e
+    logger.fatal e.backtrace
   end
   sleep(SECONDS_IN_HOUR * 1)
 end

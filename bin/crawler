@@ -7,11 +7,11 @@ SECONDS_IN_MIN  = 60
 MIN_IN_HOUR     = 60
 SECONDS_IN_HOUR = SECONDS_IN_MIN * MIN_IN_HOUR
 
-logger = Logger.new('./../log/fatal.log', 'daily')
+logger = Logger.new("#{__dir__}/../log/crawler.log", 'daily')
 
 loop do
   begin
-    Crawler.instance.run
+    Crawler.new(logger: logger).run
   rescue Exception => e
     logger.fatal e
     logger.fatal e.backtrace

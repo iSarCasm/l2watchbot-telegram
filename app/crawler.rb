@@ -1,6 +1,5 @@
 require 'mechanize'
 require 'pg'
-require 'singleton'
 require 'logger'
 require 'mail'
 
@@ -9,11 +8,10 @@ require 'pry'
 
 
 class Crawler
-  include Singleton
   SOURCE_WEBSITE = "http://l2tops.ru/"
 
-  def initialize
-    @logger    = Logger.new('./../log/logfile.log', 10, 1_024_000)
+  def initialize(logger:)
+    @logger    = logger
     @database  = PG.connect( dbname: "l2watchbot", user: "postgres", password: "postgres" )
     @agent     = Mechanize.new
   end

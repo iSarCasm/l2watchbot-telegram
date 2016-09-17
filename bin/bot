@@ -13,10 +13,17 @@ I18n.default_locale = :en
 token = ENV["L2WATCHBOT_TOKEN"]
 database  = PG.connect( dbname: "l2watchbot", user: "postgres", password: "postgres" )
 
+logger = Logger.new("#{__dir__}/../log/notifier.log", 'daily')
+
 Telegram::Bot::Client.run(token) do |bot|
   responder = TelegramResponder.new(bot, database)
   bot.listen do |message|
-    database.exec "INSERT INTO users (user_id, chat_id) values ($1, $2)", [message.from.id.to_s, message.chat.id] rescue nil
-    responder.respond_to message
+    begin
+      database.exec "INSERT INTO users (user_id, chat_id) values ($1, $2)", [message.from.id.to_s, message.chat.id] rescue nil
+      responder.respond_to message
+    rescue Exception => e
+      logger.fatal e
+      logger.fatal e.backtrace
+    end
   end
 end
