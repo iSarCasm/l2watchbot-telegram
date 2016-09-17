@@ -2,7 +2,7 @@
 
 require 'pg'
 
-Dir.mkdir("../log") rescue puts 'Folder "log" already exists.'
+Dir.mkdir("#{__dir__}/../log") rescue puts 'Folder "log" already exists.'
 
 database = PG.connect( dbname: "l2watchbot", user: "postgres", password: "postgres" )
 
