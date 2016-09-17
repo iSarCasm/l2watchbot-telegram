@@ -102,7 +102,7 @@ loop do
     users.each do |user|
       if (user[7].nil? && !user[8].nil?) || date_diff(Time.new(user[7]), Time.now) >= user[8].to_i then
         filter(api, servers, user)
-        database.exec "UPDATE users SET last_notified = $1 WHERE user_id = $2;", [Time.now.iso8601.to_s, user[0]]
+        logger.info database.exec "UPDATE users SET last_notified = $1 WHERE user_id = $2;", [Time.now.iso8601.to_s, user[0]]
       end
     end
   rescue Exception => e
