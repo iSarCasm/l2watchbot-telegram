@@ -6,11 +6,11 @@ class TelegramResponder
 
   def filter_keyboard
     types = ['C1-C4', 'Interlude', 'Epilogue', 'High five', 'Classic', I18n.t('other')]
-    types.delete('C1-C4') if @user.filter_chronicle.include?('c1')
-    types.delete('Interlude') if @user.filter_chronicle.include?('interlude')
-    types.delete('Epilogue') if @user.filter_chronicle.include?('epilogue')
-    types.delete('High five') if @user.filter_chronicle.include?('high five')
-    types.delete('Classic') if @user.filter_chronicle.include?('classic')
+    types.delete('C1-C4')         if @user.filter_chronicle.include?('c1')
+    types.delete('Interlude')     if @user.filter_chronicle.include?('interlude')
+    types.delete('Epilogue')      if @user.filter_chronicle.include?('epilogue')
+    types.delete('High five')     if @user.filter_chronicle.include?('high five')
+    types.delete('Classic')       if @user.filter_chronicle.include?('classic')
     types.delete(I18n.t('other')) if @user.filter_chronicle.include?('freya')
     pairs = []
     types.each_with_index do |t, i|

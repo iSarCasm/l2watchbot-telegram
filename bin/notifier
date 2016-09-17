@@ -2,6 +2,7 @@
 require 'telegram/bot'
 require 'pg'
 require 'json'
+require 'time'
 require_relative '../app/telegram-responder'
 # Models
 require_relative '../models/user'
@@ -27,7 +28,6 @@ def date_diff(*dates)
 end
 
 def send_servers(api, servers, user)
-  p servers
   servers.each do |s|
     day_diff = date_diff(Time.now, s[3])
     day_part =  if (day_diff > 0) then
@@ -100,11 +100,12 @@ loop do
     servers = database.exec("SELECT * from servers").values
     users = database.exec("SELECT * from users").values
     users.each do |user|
-      if (user[7].nil? && !user[8].nil?) || date_diff(Time.new(user[7]), Time.now) >= user[8].to_i then
-        logger.info database.exec "UPDATE users SET last_notified = $1 WHERE user_id = $2;", [Time.now.iso8601.to_s, user[0]]
+      if (user[7].nil? && !user[8].nil?) || date_diff(Time.parse(user[7]), Time.now) >= user[8].to_i then
         filter(api, servers, user)
+        database.exec "UPDATE users SET last_notified = $1 WHERE user_id = $2;", [Time.now.to_s, user[0]]
       end
     end
+    p users
   rescue Exception => e
     logger.fatal e
     logger.fatal e.backtrace
